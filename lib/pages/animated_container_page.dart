@@ -17,19 +17,19 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
   Color _color = Colors.red;
   double _borderRadius = 0.0;
 
-  void _randomize() {
-    Random random = Random();
+  final _random = Random();
 
+  void _randomize() {
     setState(() {
-      _width = random.nextInt(300).toDouble();
-      _height = random.nextInt(300).toDouble();
+      _width = _random.nextInt(300).toDouble();
+      _height = _random.nextInt(300).toDouble();
       _color = Color.fromRGBO(
-        random.nextInt(256),
-        random.nextInt(256),
-        random.nextInt(256),
+        _random.nextInt(256),
+        _random.nextInt(256),
+        _random.nextInt(256),
         1.0,
       );
-      _borderRadius = random.nextInt(100).toDouble();
+      _borderRadius = _random.nextInt(100).toDouble();
     });
   }
 

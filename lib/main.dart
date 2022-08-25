@@ -1,9 +1,7 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/animated_container_page.dart';
 import 'pages/animated_opacity_page.dart';
-import 'pages/tween_animation_builder_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,8 +34,12 @@ class AnimationExamplesList extends StatelessWidget {
     return ListView(
       children: const [
         ListItem(
-          title: 'AnimatedContainer',
+          title: '1 - AnimatedContainer',
           page: AnimatedContainerPage(),
+        ),
+        ListItem(
+          title: '2 - AnimatedOpacity',
+          page: AnimatedOpacityPage(),
         ),
       ],
     );
