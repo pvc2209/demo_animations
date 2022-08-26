@@ -16,7 +16,13 @@ class StopWatchApp extends StatelessWidget {
         value: SystemUiOverlayStyle.light,
         child: Scaffold(
           body: Center(
-            child: StopWatch(),
+            child: Padding(
+              padding: EdgeInsets.all(32.0),
+              child: AspectRatio(
+                aspectRatio: 1.0,
+                child: StopWatch(),
+              ),
+            ),
           ),
         ),
       ),
