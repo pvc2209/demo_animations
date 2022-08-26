@@ -35,14 +35,15 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
               ),
             ),
             Slider.adaptive(
-                min: 0.0,
-                max: 1.0,
-                value: _opacity,
-                onChanged: (double value) {
-                  setState(() {
-                    _opacity = value;
-                  });
-                }),
+              min: 0.0,
+              max: 1.0,
+              value: _opacity,
+              onChanged: (double value) {
+                setState(() {
+                  _opacity = value;
+                });
+              },
+            ),
           ],
         ),
       ),
