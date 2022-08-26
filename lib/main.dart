@@ -1,3 +1,4 @@
+import 'package:demo_animations/pages/transform_page.dart';
 import 'package:demo_animations/pages/tween_animation_builder_page.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +46,10 @@ class AnimationExamplesList extends StatelessWidget {
         ListItem(
           title: '3 - Tween Animation Builder',
           page: TweenAnimationBuilderPage(),
+        ),
+        ListItem(
+          title: '4 - Transform: RotateZ',
+          page: TransformPage(),
         ),
       ],
     );

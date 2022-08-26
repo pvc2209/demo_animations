@@ -33,6 +33,8 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
     });
   }
 
+  double _angle = 0.0;
+
   @override
   Widget build(BuildContext context) {
     String title = ModalRoute.of(context)?.settings.arguments.toString() ?? '';
@@ -64,6 +66,27 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
               width: 100,
               height: 20,
               color: Colors.pink,
+            ),
+            const SizedBox(height: 20),
+            Transform(
+              transform: Matrix4.rotationZ(_angle * pi / 180),
+              alignment: Alignment.center,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+                child: const Text("rotationZ"),
+              ),
+            ),
+            Slider.adaptive(
+              min: 0.0,
+              max: 360.0,
+              value: _angle,
+              onChanged: (value) {
+                setState(() {
+                  _angle = value;
+                });
+              },
             ),
           ],
         ),
