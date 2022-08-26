@@ -1,5 +1,6 @@
 import 'package:demo_animations/pages/transform_page.dart';
 import 'package:demo_animations/pages/tween_animation_builder_page.dart';
+import 'package:demo_animations/stop_watch/stopwatch_app.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/animated_container_page.dart';
@@ -50,6 +51,10 @@ class AnimationExamplesList extends StatelessWidget {
         ListItem(
           title: '4 - Transform: RotateZ',
           page: TransformPage(),
+        ),
+        ListItem(
+          title: '5 - StopWatch App',
+          page: StopWatchApp(),
         ),
       ],
     );

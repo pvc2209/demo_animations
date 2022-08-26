@@ -41,7 +41,7 @@ class _TransformPageState extends State<TransformPage> {
             ),
             Slider.adaptive(
               min: 0.0,
-              max: 3800.0,
+              max: 360.0,
               value: _angle,
               onChanged: (value) {
                 setState(() {
